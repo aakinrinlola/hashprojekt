@@ -23,6 +23,7 @@ class DataManager:
                     adj_close = float(row[6])
                     price_data_day = StockPriceDay(date, open_price, high, low, close, volume, adj_close)
                     
+                    
                     stock = self.hash_table.find(ticker_symbol)
                     if stock:
                         stock.add_price_data(price_data_day)
